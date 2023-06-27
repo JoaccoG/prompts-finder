@@ -8,7 +8,8 @@ const createJestConfig = nextJest({
 const config = {
   testEnvironment: 'jest-environment-jsdom',
   coverageDirectory: 'coverage',
-  collectCoverageFrom: ['app/**/*.ts', 'app/**/*.tsx']
+  collectCoverageFrom: ['app/**/*.ts', 'app/**/*.tsx'],
+  setupFilesAfterEnv: ['./jest.setup.js']
 };
 
 export default createJestConfig(config);
