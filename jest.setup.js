@@ -1,4 +1,4 @@
-import { server } from './__mocks__/server.js';
+import { server } from './__mocks__/server.ts';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
