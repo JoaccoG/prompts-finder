@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "test": "jest",
+    "prepare": "husky install",
+    "update:git": "git checkout main && git pull && git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D && git branch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
