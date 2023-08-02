@@ -1,9 +1,14 @@
-import { render } from '@testing-library/react';
-import Page from './page';
+import { render, screen } from '@testing-library/react';
+import Home from './page';
 
-describe('Page', () => {
-  test('should render', () => {
-    render(<Page />);
-    expect(true).toBe(true);
+describe('Given...', () => {
+  describe('When...', () => {
+    test('Then 1...', () => {
+      expect(true).toBe(true);
+    });
+    test('Then 2...', () => {
+      render(<Home />);
+      expect(screen.getByText(/hello/i)).toBeInTheDocument();
+    });
   });
 });
